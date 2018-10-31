@@ -1,4 +1,6 @@
 import java.util.Scanner;
+import Horse.*;
+import RaceHorse.*;
 public class DemoHorses{
 	public static void main(String[] args){
 		String name;
@@ -8,6 +10,10 @@ public class DemoHorses{
 		char RH = 'z';
 		char choice='z';
 		boolean cont=true;
+		
+		RaceHorse RHorse = new RaceHorse();
+		Horse horse = new Horse();
+		
 		Scanner inputDevice = new Scanner(System.in);
 		
 		System.out.println("Is the horse a Race Horse (y/n): ");
@@ -25,9 +31,9 @@ public class DemoHorses{
 		if(RH=='y'||RH=='Y'){
 			System.out.println("Please enter the number of races the horse has competed in: ");
 			competed = inputDevice.nextInt();
-			Horse(name,color,birthYear,competed);
+			RHorse(name,color,birthYear,competed);
 		}else{
-			Horse(name,color,birthYear);
+			horse(name,color,birthYear);
 		}
 		
 		/*while(cont){

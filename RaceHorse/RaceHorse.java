@@ -1,15 +1,18 @@
-
+package RaceHorse;
 import java.util.Scanner;
 
-public class Horse{
+public class RaceHorse{
+	
+	private int competed=0;
 	private String name;
 	private String color;
 	private int birthYear=0;
 	
-	public Horse(String a,String b,int x){
+	public RaceHorse(String a,String b,int x,int y){
 		setName(a);
 		setColor(b);
 		setBirthYear(x);
+		setCompeted(y);
 	}
 	
 	public void setName(String n){
@@ -21,6 +24,9 @@ public class Horse{
 	public void setBirthYear(int a){
 		birthYear = a;
 	}
+	public void setCompeted(int b){
+		competed = b;
+	}
 	
 	public String getName(){
 		return name;
@@ -31,7 +37,8 @@ public class Horse{
 	public int getBirthYear(){
 		return birthYear;
 	}
-	
-	
-	
+	public int getCompeted(){
+		return competed;
+	}
+
 }
